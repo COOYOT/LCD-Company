@@ -1,0 +1,456 @@
+@use 'colors' as *;
+@use 'media' as *;
+@use 'components' as *;
+@use 'mixin' as *;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 9rem;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+}
+
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	background-color: $primary-color-10;
+	&__box {
+		height: 9rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		padding: 1.5rem;
+		font-size: 3rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $primary-color-100;
+		transition: color 0.3s;
+		&:focus {
+			outline: none;
+			color: $primary-color-60;
+		}
+	}
+	&__links-box {
+		position: fixed;
+		inset: 0;
+		height: 100svh;
+		padding-top: 8rem;
+		transform: translateX(100%);
+		text-align: end;
+		list-style-type: none;
+		background-color: $primary-color-10;
+		transition: transform 0.3s;
+	}
+	&__link {
+		display: inline-block;
+		padding: 1.5rem;
+		margin: 1rem 3rem 0 0;
+		font-size: 2.2rem;
+		text-decoration: none;
+		color: $primary-color-100;
+		transition: color 0.3s;
+		&:hover,
+		&:focus {
+			color: $primary-color-60;
+		}
+		&:focus {
+			outline: none;
+		}
+		&--active {
+			font-weight: bold;
+		}
+	}
+}
+
+.header {
+	overflow: hidden;
+	height: 90rem;
+	padding-top: 9rem;
+	background-color: $primary-color-10;
+
+	&__content-box {
+		text-align: center;
+	}
+
+	&__heading {
+		margin-top: 3rem;
+		color: $primary-color-100;
+		text-transform: uppercase;
+		text-wrap: balance;
+		font-size: 4rem;
+		line-height: 125%;
+	}
+	&__subheading {
+		margin-top: 3rem;
+		color: $primary-color-85;
+		font-size: 2.2rem;
+		line-height: 150%;
+		text-wrap: balance;
+	}
+	&__cta-btn {
+		display: inline-block;
+		margin-top: 6rem;
+		padding: 1.5rem 3rem;
+		font-size: 2.2rem;
+		font-weight: bold;
+		text-decoration: none;
+		background-color: $primary-color-40;
+		color: $primary-color-100;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		&:hover,
+		&:focus {
+			outline: none;
+			background-color: $primary-color-50;
+		}
+	}
+	&__img-box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin-top: 10rem;
+		z-index: 1;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 10%;
+			height: 10%;
+			scale: 17;
+			background: radial-gradient(50% 50% at 50% 50%, rgba(190, 63, 63, 0.71) 0%, rgba(25, 25, 25, 0) 100%);
+			z-index: -1;
+		}
+	}
+	&__img {
+		object-fit: scale-down;
+		width: 100%;
+		height: 100%;
+		max-width: 50rem;
+	}
+}
+
+.main {
+	.aboutus {
+		padding: 10rem 0;
+		background-color: $primary-color-5;
+
+		&__img-box {
+			display: none;
+		}
+
+		&__text-box {
+			@include flex-center-column;
+			position: relative;
+			text-align: center;
+			text-wrap: balance;
+		}
+		&__heading {
+			color: $primary-color-100;
+			font-size: 3.5rem;
+			text-transform: uppercase;
+		}
+		&__description {
+			margin: 2rem 0 4rem 0;
+			font-size: 2rem;
+			color: $primary-color-85;
+		}
+		&__btn {
+			position: relative;
+			text-decoration: none;
+			font-size: 2rem;
+			font-weight: bold;
+			color: $primary-color-100;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				width: 30%;
+				height: 0.3rem;
+				background-color: $primary-color-40;
+				transition: width 0.3s;
+			}
+			&:hover::before {
+				width: 100%;
+			}
+			&:focus::before {
+				width: 100%;
+			}
+			&:focus {
+				color: $primary-color-40;
+				outline: none;
+			}
+		}
+		&__decorate-square {
+			display: none;
+			position: absolute;
+			width: 25px;
+			height: 25px;
+
+			&--one {
+				top: 0;
+				left: 0;
+				border-top: 5px $primary-color-40 solid;
+				border-left: 5px $primary-color-40 solid;
+			}
+			&--two {
+				top: 0;
+				right: 0;
+				border-top: 5px $primary-color-40 solid;
+				border-right: 5px $primary-color-40 solid;
+			}
+			&--three {
+				bottom: 0;
+				left: 0;
+				border-bottom: 5px $primary-color-40 solid;
+				border-left: 5px $primary-color-40 solid;
+			}
+			&--four {
+				bottom: 0;
+				right: 0;
+				border-bottom: 5px $primary-color-40 solid;
+				border-right: 5px $primary-color-40 solid;
+			}
+		}
+	}
+	.cars {
+		padding: 8rem 0;
+		background-color: $primary-color-10;
+		overflow: hidden;
+		&__card {
+			margin-top: 20rem;
+			&:nth-child(1) {
+				margin-top: 10rem;
+			}
+		}
+		&__img-box {
+			@include flex-center-column;
+			position: relative;
+			z-index: 1;
+			&::after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 25%;
+				width: 10%;
+				height: 10%;
+				scale: 13;
+				background: radial-gradient(50% 50% at 50% 50%, #44474a 0%, rgba(25, 25, 25, 0) 100%);
+				z-index: -1;
+			}
+		}
+		&__img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			max-width: 40rem;
+		}
+		&__price {
+			margin-top: 3rem;
+			font-size: 3rem;
+			text-align: center;
+			font-weight: bold;
+			color: $primary-color-100;
+		}
+		&__heading {
+			padding: 1rem;
+			margin-top: 5rem;
+			font-size: 3.5rem;
+			text-align: center;
+			color: $primary-color-100;
+			background-color: $primary-color-30;
+		}
+		&__info {
+			margin-top: 5rem;
+			text-align: center;
+			font-size: 2rem;
+			color: $primary-color-100;
+		}
+		&__icon {
+			width: 100%;
+			max-width: 5.5rem;
+		}
+		&__description {
+			font-weight: bold;
+		}
+		&__btns-box {
+			display: flex;
+			justify-content: center;
+			margin-top: 7rem;
+			gap: 3rem;
+		}
+		&__btn {
+			width: 100%;
+			max-width: 15rem;
+			padding: 1rem 2rem;
+			text-align: center;
+			font-weight: bold;
+			font-size: 2rem;
+			text-decoration: none;
+			color: $primary-color-100;
+			border: 0.3rem solid $primary-color-40;
+			transition: background-color 0.3s, border 0.3s;
+
+			&:hover,
+			&:focus {
+				border-color: $primary-color-50;
+				background-color: $primary-color-50;
+			}
+			&:focus {
+				outline: none;
+			}
+			&--primary {
+				background-color: $primary-color-40;
+			}
+		}
+	}
+
+	.contact {
+		padding: 18rem 0;
+		background-color: $primary-color-10;
+
+		&__grid-container {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+		}
+		&__text-box {
+			padding: 3rem;
+			text-align: center;
+			font-size: 2rem;
+			background-color: $primary-color-40;
+			color: $primary-color-100;
+			line-height: 190%;
+		}
+		&__map-box {
+			grid-row: 1/2;
+		}
+		&__heading {
+			font-weight: bold;
+			font-size: 3.5rem;
+			text-transform: uppercase;
+		}
+		&__address-box,
+		&__details-box,
+		&__social-box {
+			margin-top: 3rem;
+		}
+		&__detail {
+			display: flex;
+			justify-content: center;
+			font-size: 2rem;
+		}
+		&__icon {
+			width: 2rem;
+			margin-right: 1rem;
+		}
+		&__social-icon {
+			width: 3rem;
+		}
+		&__social-box {
+			@include flex-center;
+		}
+		&__link {
+			@include flex-center;
+			padding: 1rem;
+			transition: transform 0.3s;
+
+			&:hover,
+			&:focus {
+				transform: translateY(-10%);
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+.footer {
+	padding: 10rem 0;
+	background-color: $primary-color-5;
+	text-align: center;
+	overflow: hidden;
+	&__heading {
+		margin: 3rem 0 0.5rem 0;
+		color: $primary-color-100;
+		font-size: 2.2rem;
+	}
+	&__logo {
+		font-size: 3rem;
+		color: $primary-color-100;
+		font-weight: bold;
+	}
+	&__items {
+		list-style: none;
+	}
+	&__item {
+		margin-top: 1rem;
+		transition: transform 0.3s;
+		&:hover {
+			transform: translateX(10%);
+		}
+	}
+	&__link {
+		color: $primary-color-85;
+		font-size: 1.8rem;
+		&:focus {
+			outline: none;
+			color: $primary-color-60;
+		}
+	}
+}
+
+.active-nav {
+	transform: translateX(0);
+}
+
+.sticky-body {
+	overflow: hidden;
+}
+
+@keyframes a {
+	0% {
+		display: none;
+	}
+	1% {
+		display: block;
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 576px) {
+	@include min-width-576px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+	@include min576-max767px;
+}
+@media (min-width: 768px) {
+	@include min-width-768px;
+}
+@media (min-width: 992px) {
+	@include min-width-992px;
+}
+@media (min-width: 1200px) {
+	@include min-width-1200px;
+}
