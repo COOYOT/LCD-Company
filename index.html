@@ -28,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
@@ -59,7 +59,7 @@
                 <h1 class="header__heading">Luxury cars in europe</h1>
                 <p class="header__subheading">Unveiling European Elegance: A Pinnacle of Luxury Cars, Where
                     Craftsmanship Meets Performance</p>
-                <a href="#aboutus" class="header__cta-btn">Contact us</a>
+                <a href="#contact" class="header__cta-btn" aria-label="go to aboutus section">Read more</a>
             </div>
             <div class="header__img-box">
                 <img class="header__img" src="./dist/img/hero-car.png" alt="Mercedes CLA 45 AMG">
@@ -69,7 +69,6 @@
 
     <main class="main">
         <section class="aboutus scrollspy" id="aboutus">
-
             <div class="wrapper aboutus__grid-container">
                 <div class="aboutus__img-box">
                     <img class="aboutus__img" src="./dist/img/aboutus-img.png" alt="Front Mercedes-AMG GT">
@@ -80,7 +79,7 @@
                         available for both sale and rental. Our curated fleet features iconic brands, ensuring a
                         seamless blend of sophistication and cutting-edge technology. Experience the epitome of opulence
                         on the road with LCD, where every drive is a statement of style and performance</p>
-                    <a href="#contact" class="aboutus__btn">contact us</a>
+                    <a href="#contact" class="aboutus__btn" aria-label="go to contact section">contact us</a>
                     <div class="aboutus__decorate-square aboutus__decorate-square--one"></div>
                     <div class="aboutus__decorate-square aboutus__decorate-square--two"></div>
                     <div class="aboutus__decorate-square aboutus__decorate-square--three"></div>
@@ -88,7 +87,6 @@
                 </div>
             </div>
         </section>
-
         <section class="cars scrollspy" id="cars">
             <div class="wrapper">
                 <div class="cars__card">
@@ -138,7 +136,6 @@
                                         <p class="cars__description">9.2 secs | 0-60mph</p>
                                     </div>
                                 </div>
-
                                 <div class="cars__info">
                                     <div class="cars__icon-box">
                                         <img src="./dist/img/icons/manual-gearbox.svg" alt="" class="cars__icon">
@@ -160,8 +157,9 @@
                             </div>
                         </div>
                         <div class="cars__btns-box">
-                            <a href="#" class="cars__btn">Rent</a>
-                            <a href="#" class="cars__btn cars__btn--primary">Buy</a>
+                            <a href="#" class="cars__btn" aria-label="Proceed to the rental process">Rent</a>
+                            <a href="#" class="cars__btn cars__btn--primary"
+                                aria-label="Proceed to the purchase process">Buy</a>
                         </div>
                     </div>
                 </div>
@@ -212,7 +210,6 @@
                                         <p class="cars__description">9.2 secs | 0-60mph</p>
                                     </div>
                                 </div>
-
                                 <div class="cars__info">
                                     <div class="cars__icon-box">
                                         <img src="./dist/img/icons/manual-gearbox.svg" alt="" class="cars__icon">
@@ -234,8 +231,9 @@
                             </div>
                         </div>
                         <div class="cars__btns-box">
-                            <a href="#" class="cars__btn">Rent</a>
-                            <a href="#" class="cars__btn cars__btn--primary">Buy</a>
+                            <a href="#" class="cars__btn" aria-label="Proceed to the rental process">Rent</a>
+                            <a href="#" class="cars__btn cars__btn--primary"
+                                aria-label="Proceed to the purchase process">Buy</a>
                         </div>
                     </div>
                 </div>
@@ -286,7 +284,6 @@
                                         <p class="cars__description">9.2 secs | 0-60mph</p>
                                     </div>
                                 </div>
-
                                 <div class="cars__info">
                                     <div class="cars__icon-box">
                                         <img src="./dist/img/icons/manual-gearbox.svg" alt="" class="cars__icon">
@@ -308,21 +305,21 @@
                             </div>
                         </div>
                         <div class="cars__btns-box">
-                            <a href="#" class="cars__btn">Rent</a>
-                            <a href="#" class="cars__btn cars__btn--primary">Buy</a>
+                            <a href="#" class="cars__btn" aria-label="Proceed to the rental process">Rent</a>
+                            <a href="#" class="cars__btn cars__btn--primary"
+                                aria-label="Proceed to the purchase process">Buy</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="contact scrollspy" id="contact">
             <div class="wrapper contact__grid-container">
                 <div class="contact__map-box">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.0787098991345!2d-1.898551655150226!3d52.47771056682774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc896c750ee5%3A0x9da3f5ae36c39f33!2sNew%20Street%20Station%2C%20East%20Mews%2C%20Birmingham%20B2%204PY%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1705858434769!5m2!1spl!2spl"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade" aria-label="location map"></iframe>
                 </div>
                 <div class="contact__text-box">
                     <h2 class="contact__heading">Get in touch</h2>
