@@ -3,7 +3,6 @@ const navLinks = document.querySelectorAll('.nav__link')
 const navBtn = document.querySelector('.hamburger')
 const sections = document.querySelectorAll('.scrollspy')
 const linksBox = document.querySelector('.nav__links-box')
-const carCard = document.querySelectorAll('.cars__card')
 
 const navToggle = () => {
 	navBtn.classList.toggle('is-active')
