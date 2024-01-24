@@ -426,19 +426,6 @@ body {
 	overflow: hidden;
 }
 
-@keyframes a {
-	0% {
-		display: none;
-	}
-	1% {
-		display: block;
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
 @media (min-width: 576px) {
 	@include min-width-576px;
 }
